@@ -147,6 +147,20 @@ namespace Assignment2
             }
         }
 
+        private void autoParkCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autoParkCheckBox.Checked)
+            {
+                _additionalOptions += 2399.99;
+                additionalOptionsTextBox.Text = Convert.ToString(_additionalOptions);
+            }
+            else
+            {
+                _additionalOptions -= 2399.99;
+                additionalOptionsTextBox.Text = Convert.ToString(_additionalOptions);
+            }
+        }
+
         private void pearlizedRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if(pearlizedRadioButton.Checked)
@@ -175,6 +189,21 @@ namespace Assignment2
             }
         }
 
+        private void mattFinishRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mattFinishRadioButton.Checked)
+            {
+                _additionalOptions += 368.46;
+                additionalOptionsTextBox.Text = Convert.ToString(_additionalOptions);
+            }
+            else
+            {
+                _additionalOptions -= 368.46;
+                additionalOptionsTextBox.Text = Convert.ToString(_additionalOptions);
+            }
+        }
+
+
         private void clearButton_Click(object sender, EventArgs e)
         {
             basePriceTextBox.Clear();
@@ -187,6 +216,7 @@ namespace Assignment2
             stereoCheckBox.Checked = false;
             leatherInteriorCheckBox.Checked = false;
             computerNavigationCheckBox.Checked = false;
+            autoParkCheckBox.Checked = false;
 
             standardRadioButton.Checked = true;
 
@@ -222,5 +252,7 @@ namespace Assignment2
         {
             clearButton_Click(sender, e);
         }
+
+
     }
 }

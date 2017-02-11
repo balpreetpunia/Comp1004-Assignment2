@@ -63,6 +63,8 @@
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoParkCheckBox = new System.Windows.Forms.CheckBox();
+            this.mattFinishRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -192,12 +194,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.autoParkCheckBox);
             this.groupBox1.Controls.Add(this.computerNavigationCheckBox);
             this.groupBox1.Controls.Add(this.leatherInteriorCheckBox);
             this.groupBox1.Controls.Add(this.stereoCheckBox);
             this.groupBox1.Location = new System.Drawing.Point(261, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(153, 128);
+            this.groupBox1.Size = new System.Drawing.Size(153, 152);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Additional Items";
@@ -205,7 +208,7 @@
             // computerNavigationCheckBox
             // 
             this.computerNavigationCheckBox.AutoSize = true;
-            this.computerNavigationCheckBox.Location = new System.Drawing.Point(22, 99);
+            this.computerNavigationCheckBox.Location = new System.Drawing.Point(22, 86);
             this.computerNavigationCheckBox.Name = "computerNavigationCheckBox";
             this.computerNavigationCheckBox.Size = new System.Drawing.Size(125, 17);
             this.computerNavigationCheckBox.TabIndex = 2;
@@ -216,7 +219,7 @@
             // leatherInteriorCheckBox
             // 
             this.leatherInteriorCheckBox.AutoSize = true;
-            this.leatherInteriorCheckBox.Location = new System.Drawing.Point(22, 66);
+            this.leatherInteriorCheckBox.Location = new System.Drawing.Point(22, 57);
             this.leatherInteriorCheckBox.Name = "leatherInteriorCheckBox";
             this.leatherInteriorCheckBox.Size = new System.Drawing.Size(97, 17);
             this.leatherInteriorCheckBox.TabIndex = 1;
@@ -227,7 +230,7 @@
             // stereoCheckBox
             // 
             this.stereoCheckBox.AutoSize = true;
-            this.stereoCheckBox.Location = new System.Drawing.Point(22, 34);
+            this.stereoCheckBox.Location = new System.Drawing.Point(22, 28);
             this.stereoCheckBox.Name = "stereoCheckBox";
             this.stereoCheckBox.Size = new System.Drawing.Size(94, 17);
             this.stereoCheckBox.TabIndex = 0;
@@ -237,12 +240,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.mattFinishRadioButton);
             this.groupBox2.Controls.Add(this.customizedDetailingRadioButton);
             this.groupBox2.Controls.Add(this.pearlizedRadioButton);
             this.groupBox2.Controls.Add(this.standardRadioButton);
-            this.groupBox2.Location = new System.Drawing.Point(261, 201);
+            this.groupBox2.Location = new System.Drawing.Point(261, 218);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(153, 140);
+            this.groupBox2.Size = new System.Drawing.Size(153, 164);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Exterior Finish";
@@ -250,7 +254,7 @@
             // customizedDetailingRadioButton
             // 
             this.customizedDetailingRadioButton.AutoSize = true;
-            this.customizedDetailingRadioButton.Location = new System.Drawing.Point(22, 108);
+            this.customizedDetailingRadioButton.Location = new System.Drawing.Point(22, 97);
             this.customizedDetailingRadioButton.Name = "customizedDetailingRadioButton";
             this.customizedDetailingRadioButton.Size = new System.Drawing.Size(123, 17);
             this.customizedDetailingRadioButton.TabIndex = 2;
@@ -262,7 +266,7 @@
             // pearlizedRadioButton
             // 
             this.pearlizedRadioButton.AutoSize = true;
-            this.pearlizedRadioButton.Location = new System.Drawing.Point(22, 75);
+            this.pearlizedRadioButton.Location = new System.Drawing.Point(22, 66);
             this.pearlizedRadioButton.Name = "pearlizedRadioButton";
             this.pearlizedRadioButton.Size = new System.Drawing.Size(68, 17);
             this.pearlizedRadioButton.TabIndex = 1;
@@ -274,7 +278,7 @@
             // 
             this.standardRadioButton.AutoSize = true;
             this.standardRadioButton.Checked = true;
-            this.standardRadioButton.Location = new System.Drawing.Point(22, 39);
+            this.standardRadioButton.Location = new System.Drawing.Point(22, 35);
             this.standardRadioButton.Name = "standardRadioButton";
             this.standardRadioButton.Size = new System.Drawing.Size(68, 17);
             this.standardRadioButton.TabIndex = 0;
@@ -284,7 +288,7 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(12, 357);
+            this.calculateButton.Location = new System.Drawing.Point(12, 393);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(75, 23);
             this.calculateButton.TabIndex = 16;
@@ -294,7 +298,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(175, 353);
+            this.clearButton.Location = new System.Drawing.Point(175, 389);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 17;
@@ -304,7 +308,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(338, 357);
+            this.exitButton.Location = new System.Drawing.Point(338, 393);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 18;
@@ -320,7 +324,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(426, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(424, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -412,12 +416,35 @@
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // autoParkCheckBox
+            // 
+            this.autoParkCheckBox.AutoSize = true;
+            this.autoParkCheckBox.Location = new System.Drawing.Point(22, 115);
+            this.autoParkCheckBox.Name = "autoParkCheckBox";
+            this.autoParkCheckBox.Size = new System.Drawing.Size(110, 17);
+            this.autoParkCheckBox.TabIndex = 3;
+            this.autoParkCheckBox.Text = "Auto Park System";
+            this.autoParkCheckBox.UseVisualStyleBackColor = true;
+            this.autoParkCheckBox.CheckedChanged += new System.EventHandler(this.autoParkCheckBox_CheckedChanged);
+            // 
+            // mattFinishRadioButton
+            // 
+            this.mattFinishRadioButton.AutoSize = true;
+            this.mattFinishRadioButton.Location = new System.Drawing.Point(22, 128);
+            this.mattFinishRadioButton.Name = "mattFinishRadioButton";
+            this.mattFinishRadioButton.Size = new System.Drawing.Size(76, 17);
+            this.mattFinishRadioButton.TabIndex = 3;
+            this.mattFinishRadioButton.TabStop = true;
+            this.mattFinishRadioButton.Text = "Matt Finish";
+            this.mattFinishRadioButton.UseVisualStyleBackColor = true;
+            this.mattFinishRadioButton.CheckedChanged += new System.EventHandler(this.mattFinishRadioButton_CheckedChanged);
+            // 
             // SharpAutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(426, 392);
+            this.ClientSize = new System.Drawing.Size(424, 428);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.calculateButton);
@@ -492,6 +519,8 @@
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
+        private System.Windows.Forms.CheckBox autoParkCheckBox;
+        private System.Windows.Forms.RadioButton mattFinishRadioButton;
     }
 }
 
