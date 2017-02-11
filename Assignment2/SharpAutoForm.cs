@@ -67,11 +67,6 @@ namespace Assignment2
             }
         }
 
-        private void basePriceTextBox_TextChanged(object sender, EventArgs e)
-        {
-            _basePrice = double.Parse(basePriceTextBox.Text);
-        }
-
         private void additionalOptionsTextBox_TextChanged(object sender, EventArgs e)
         {
             _additionalOptions = double.Parse(additionalOptionsTextBox.Text);
@@ -84,20 +79,30 @@ namespace Assignment2
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            _subTotal = _basePrice + _additionalOptions;
-            _salesTax = 0.13 * _subTotal;
-            _total = _subTotal + _salesTax;
-            _amountDue = _total - _tradeInAllowance;
+            if (basePriceTextBox.Text != "")
+            {
+                _basePrice = double.Parse(basePriceTextBox.Text);
 
-            basePriceTextBox.Text = Convert.ToString(_basePrice);
+                _subTotal = _basePrice + _additionalOptions;
+                _salesTax = 0.13 * _subTotal;
+                _total = _subTotal + _salesTax;
+                _amountDue = _total - _tradeInAllowance;
 
-            subTotalTextBox.Text = Convert.ToString(_subTotal);
+                basePriceTextBox.Text = Convert.ToString(_basePrice);
 
-            salesTaxTextBox.Text = Convert.ToString(_salesTax);
+                subTotalTextBox.Text = Convert.ToString(_subTotal);
 
-            totalTextBox.Text = Convert.ToString(_total);
+                salesTaxTextBox.Text = Convert.ToString(_salesTax);
 
-            amountDueTextBox.Text = Convert.ToString(_amountDue);
+                totalTextBox.Text = Convert.ToString(_total);
+
+                amountDueTextBox.Text = Convert.ToString(_amountDue);
+            }
+
+            else
+            {
+                MessageBox.Show("Please enter a base price to calculate");
+            }
         }
 
         private void stereoCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -172,7 +177,7 @@ namespace Assignment2
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            //basePriceTextBox.Clear();
+            basePriceTextBox.Clear();
             subTotalTextBox.Clear();
             salesTaxTextBox.Clear();
             totalTextBox.Clear();
@@ -190,7 +195,32 @@ namespace Assignment2
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void SharpAutoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            calculateButton_Click(sender, e);
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearButton_Click(sender, e);
         }
     }
 }

@@ -137,7 +137,6 @@
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.basePriceTextBox.TabIndex = 7;
-            this.basePriceTextBox.TextChanged += new System.EventHandler(this.basePriceTextBox_TextChanged);
             this.basePriceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.basePriceTextBox_KeyPressed);
             // 
             // additionalOptionsTextBox
@@ -342,6 +341,7 @@
             this.exitToolStripMenuItem.ShowShortcutKeys = false;
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(85, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -362,23 +362,25 @@
             this.calculateToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.calculateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.calculateToolStripMenuItem.ShowShortcutKeys = false;
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.calculateToolStripMenuItem.Text = "&Calculate";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.clearToolStripMenuItem.ShowShortcutKeys = false;
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clearToolStripMenuItem.Text = "C&lear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
             this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem.ShowShortcutKeys = false;
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fontToolStripMenuItem.Text = "&Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
@@ -387,7 +389,7 @@
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
             this.colorToolStripMenuItem.ShowShortcutKeys = false;
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.colorToolStripMenuItem.Text = "C&olor";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -414,6 +416,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(426, 392);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.clearButton);
@@ -436,8 +439,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "SharpAutoForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Auto Center";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SharpAutoForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
