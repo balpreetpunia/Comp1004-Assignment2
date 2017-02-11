@@ -90,13 +90,13 @@ namespace Assignment2
 
                 basePriceTextBox.Text = Convert.ToString(_basePrice);
 
-                subTotalTextBox.Text = Convert.ToString(_subTotal);
+                subTotalTextBox.Text = _subTotal.ToString("F");
 
-                salesTaxTextBox.Text = Convert.ToString(_salesTax);
+                salesTaxTextBox.Text = _salesTax.ToString("F");
 
-                totalTextBox.Text = Convert.ToString(_total);
+                totalTextBox.Text = _total.ToString("F");
 
-                amountDueTextBox.Text = Convert.ToString(_amountDue);
+                amountDueTextBox.Text = _amountDue.ToString("F");
             }
 
             else
