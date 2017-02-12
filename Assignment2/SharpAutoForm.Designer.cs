@@ -43,10 +43,12 @@
             this.tradeInAllowanceTextBox = new System.Windows.Forms.TextBox();
             this.amountDueTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.autoParkCheckBox = new System.Windows.Forms.CheckBox();
             this.computerNavigationCheckBox = new System.Windows.Forms.CheckBox();
             this.leatherInteriorCheckBox = new System.Windows.Forms.CheckBox();
             this.stereoCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.mattFinishRadioButton = new System.Windows.Forms.RadioButton();
             this.customizedDetailingRadioButton = new System.Windows.Forms.RadioButton();
             this.pearlizedRadioButton = new System.Windows.Forms.RadioButton();
             this.standardRadioButton = new System.Windows.Forms.RadioButton();
@@ -63,8 +65,6 @@
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoParkCheckBox = new System.Windows.Forms.CheckBox();
-            this.mattFinishRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -73,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 72);
+            this.label1.Location = new System.Drawing.Point(9, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 0;
@@ -82,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 109);
+            this.label2.Location = new System.Drawing.Point(9, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 1;
@@ -91,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 148);
+            this.label3.Location = new System.Drawing.Point(9, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 2;
@@ -100,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 183);
+            this.label4.Location = new System.Drawing.Point(9, 223);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 3;
@@ -109,7 +109,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 220);
+            this.label5.Location = new System.Drawing.Point(9, 260);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 4;
@@ -118,7 +118,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 257);
+            this.label6.Location = new System.Drawing.Point(9, 297);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 13);
             this.label6.TabIndex = 5;
@@ -127,7 +127,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 294);
+            this.label7.Location = new System.Drawing.Point(9, 334);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 13);
             this.label7.TabIndex = 6;
@@ -135,7 +135,7 @@
             // 
             // basePriceTextBox
             // 
-            this.basePriceTextBox.Location = new System.Drawing.Point(114, 69);
+            this.basePriceTextBox.Location = new System.Drawing.Point(114, 109);
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.basePriceTextBox.TabIndex = 7;
@@ -143,7 +143,7 @@
             // 
             // additionalOptionsTextBox
             // 
-            this.additionalOptionsTextBox.Location = new System.Drawing.Point(114, 106);
+            this.additionalOptionsTextBox.Location = new System.Drawing.Point(114, 146);
             this.additionalOptionsTextBox.Name = "additionalOptionsTextBox";
             this.additionalOptionsTextBox.ReadOnly = true;
             this.additionalOptionsTextBox.Size = new System.Drawing.Size(100, 20);
@@ -152,7 +152,7 @@
             // 
             // subTotalTextBox
             // 
-            this.subTotalTextBox.Location = new System.Drawing.Point(114, 143);
+            this.subTotalTextBox.Location = new System.Drawing.Point(114, 183);
             this.subTotalTextBox.Name = "subTotalTextBox";
             this.subTotalTextBox.ReadOnly = true;
             this.subTotalTextBox.Size = new System.Drawing.Size(100, 20);
@@ -160,7 +160,7 @@
             // 
             // salesTaxTextBox
             // 
-            this.salesTaxTextBox.Location = new System.Drawing.Point(114, 180);
+            this.salesTaxTextBox.Location = new System.Drawing.Point(114, 220);
             this.salesTaxTextBox.Name = "salesTaxTextBox";
             this.salesTaxTextBox.ReadOnly = true;
             this.salesTaxTextBox.Size = new System.Drawing.Size(100, 20);
@@ -168,7 +168,7 @@
             // 
             // totalTextBox
             // 
-            this.totalTextBox.Location = new System.Drawing.Point(114, 217);
+            this.totalTextBox.Location = new System.Drawing.Point(114, 257);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(100, 20);
@@ -176,9 +176,8 @@
             // 
             // tradeInAllowanceTextBox
             // 
-            this.tradeInAllowanceTextBox.Location = new System.Drawing.Point(114, 254);
+            this.tradeInAllowanceTextBox.Location = new System.Drawing.Point(114, 294);
             this.tradeInAllowanceTextBox.Name = "tradeInAllowanceTextBox";
-            this.tradeInAllowanceTextBox.ReadOnly = true;
             this.tradeInAllowanceTextBox.Size = new System.Drawing.Size(100, 20);
             this.tradeInAllowanceTextBox.TabIndex = 12;
             this.tradeInAllowanceTextBox.Text = "0";
@@ -186,7 +185,7 @@
             // 
             // amountDueTextBox
             // 
-            this.amountDueTextBox.Location = new System.Drawing.Point(114, 291);
+            this.amountDueTextBox.Location = new System.Drawing.Point(114, 331);
             this.amountDueTextBox.Name = "amountDueTextBox";
             this.amountDueTextBox.ReadOnly = true;
             this.amountDueTextBox.Size = new System.Drawing.Size(100, 20);
@@ -204,6 +203,17 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Additional Items";
+            // 
+            // autoParkCheckBox
+            // 
+            this.autoParkCheckBox.AutoSize = true;
+            this.autoParkCheckBox.Location = new System.Drawing.Point(22, 115);
+            this.autoParkCheckBox.Name = "autoParkCheckBox";
+            this.autoParkCheckBox.Size = new System.Drawing.Size(110, 17);
+            this.autoParkCheckBox.TabIndex = 3;
+            this.autoParkCheckBox.Text = "Auto Park System";
+            this.autoParkCheckBox.UseVisualStyleBackColor = true;
+            this.autoParkCheckBox.CheckedChanged += new System.EventHandler(this.autoParkCheckBox_CheckedChanged);
             // 
             // computerNavigationCheckBox
             // 
@@ -250,6 +260,18 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Exterior Finish";
+            // 
+            // mattFinishRadioButton
+            // 
+            this.mattFinishRadioButton.AutoSize = true;
+            this.mattFinishRadioButton.Location = new System.Drawing.Point(22, 128);
+            this.mattFinishRadioButton.Name = "mattFinishRadioButton";
+            this.mattFinishRadioButton.Size = new System.Drawing.Size(76, 17);
+            this.mattFinishRadioButton.TabIndex = 3;
+            this.mattFinishRadioButton.TabStop = true;
+            this.mattFinishRadioButton.Text = "Matt Finish";
+            this.mattFinishRadioButton.UseVisualStyleBackColor = true;
+            this.mattFinishRadioButton.CheckedChanged += new System.EventHandler(this.mattFinishRadioButton_CheckedChanged);
             // 
             // customizedDetailingRadioButton
             // 
@@ -366,7 +388,7 @@
             this.calculateToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.calculateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.calculateToolStripMenuItem.ShowShortcutKeys = false;
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.calculateToolStripMenuItem.Text = "&Calculate";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             // 
@@ -375,7 +397,7 @@
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.clearToolStripMenuItem.ShowShortcutKeys = false;
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clearToolStripMenuItem.Text = "C&lear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -384,7 +406,7 @@
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
             this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem.ShowShortcutKeys = false;
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.fontToolStripMenuItem.Text = "&Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
@@ -393,7 +415,7 @@
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
             this.colorToolStripMenuItem.ShowShortcutKeys = false;
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.colorToolStripMenuItem.Text = "C&olor";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -415,29 +437,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // autoParkCheckBox
-            // 
-            this.autoParkCheckBox.AutoSize = true;
-            this.autoParkCheckBox.Location = new System.Drawing.Point(22, 115);
-            this.autoParkCheckBox.Name = "autoParkCheckBox";
-            this.autoParkCheckBox.Size = new System.Drawing.Size(110, 17);
-            this.autoParkCheckBox.TabIndex = 3;
-            this.autoParkCheckBox.Text = "Auto Park System";
-            this.autoParkCheckBox.UseVisualStyleBackColor = true;
-            this.autoParkCheckBox.CheckedChanged += new System.EventHandler(this.autoParkCheckBox_CheckedChanged);
-            // 
-            // mattFinishRadioButton
-            // 
-            this.mattFinishRadioButton.AutoSize = true;
-            this.mattFinishRadioButton.Location = new System.Drawing.Point(22, 128);
-            this.mattFinishRadioButton.Name = "mattFinishRadioButton";
-            this.mattFinishRadioButton.Size = new System.Drawing.Size(76, 17);
-            this.mattFinishRadioButton.TabIndex = 3;
-            this.mattFinishRadioButton.TabStop = true;
-            this.mattFinishRadioButton.Text = "Matt Finish";
-            this.mattFinishRadioButton.UseVisualStyleBackColor = true;
-            this.mattFinishRadioButton.CheckedChanged += new System.EventHandler(this.mattFinishRadioButton_CheckedChanged);
             // 
             // SharpAutoForm
             // 

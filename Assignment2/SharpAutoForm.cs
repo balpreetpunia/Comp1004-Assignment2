@@ -253,6 +253,6 @@ namespace Assignment2
             clearButton_Click(sender, e);
         }
 
-
+        
     }
 }
