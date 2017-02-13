@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /// <summary>
-/// Name - Balpreet Pnia 200335082
+/// App Name - Sharp Auto Form
+/// Author - Balpreet Pnia 200335082
+/// App Description - This application takes in various inputs from the user and accordingly outputs the amount due for them.
 /// COMP1004 - Assignment 2
 /// /// </summary>
 
