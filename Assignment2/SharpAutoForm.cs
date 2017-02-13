@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Name - Balpreet Pnia 200335082
+/// COMP1004 - Assignment 2
+/// /// </summary>
+
 namespace Assignment2
 {
     public partial class SharpAutoForm : Form
