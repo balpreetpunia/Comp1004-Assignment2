@@ -96,7 +96,7 @@ namespace Assignment2
 
                 totalTextBox.Text = _total.ToString("F");
 
-                amountDueTextBox.Text = _amountDue.ToString("F");
+                amountDueTextBox.Text = "$ " + _amountDue.ToString("F");
             }
 
             else
