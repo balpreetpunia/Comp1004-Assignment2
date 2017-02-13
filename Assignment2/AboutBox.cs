@@ -9,6 +9,9 @@ using System.Windows.Forms;
 
 namespace Assignment2
 {
+    /// <summary>
+    /// This is the about form
+    /// </summary>
     partial class AboutBox : Form
     {
         public AboutBox()

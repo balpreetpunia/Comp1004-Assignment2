@@ -12,6 +12,7 @@ namespace Assignment2
 {
     public partial class SharpAutoForm : Form
     {
+        // Private variables
 
         private Double _basePrice;
         private Double _additionalOptions;
@@ -21,13 +22,20 @@ namespace Assignment2
         private Double _tradeInAllowance;
         private Double _amountDue;
 
-
+        /// <summary>
+        /// Default Costructor
+        /// </summary>
+        
         public SharpAutoForm()
         {
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// This method brings up the font dialog
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -37,7 +45,11 @@ namespace Assignment2
             basePriceTextBox.Font = fontDialog.Font;
             amountDueTextBox.Font = fontDialog.Font;
         }
-
+        /// <summary>
+        /// This method brings up the color dialog and applies it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void colorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ColorDialog colorDialog = new ColorDialog();
@@ -46,6 +58,11 @@ namespace Assignment2
             basePriceTextBox.BackColor = colorDialog.Color;
             amountDueTextBox.BackColor = colorDialog.Color;
         }
+        /// <summary>
+        /// This method brings up the about form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -53,6 +70,11 @@ namespace Assignment2
 
             aboutForm.ShowDialog();
         }
+        /// <summary>
+        /// This method lets the user input only number in the base price field.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void basePriceTextBox_KeyPressed(object sender, KeyPressEventArgs e)
         {
@@ -66,28 +88,54 @@ namespace Assignment2
                 e.Handled = true;
             }
         }
+        /// <summary>
+        /// This method puts the value in the additional textbot to its equivalent variable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void additionalOptionsTextBox_TextChanged(object sender, EventArgs e)
         {
             _additionalOptions = double.Parse(additionalOptionsTextBox.Text);
         }
+        /// <summary>
+        /// This method puts the value in the tradeinallowance textbot to its equivalent variable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void tradeInAllowanceTextBox_TextChanged(object sender, EventArgs e)
         {
             _tradeInAllowance = double.Parse(tradeInAllowanceTextBox.Text);
         }
-
+        /// <summary>
+        /// This method hold the alorithm for the calculate button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            //This is to check if the base price field holds some value.
             if (basePriceTextBox.Text != "")
             {
+                //returns the value from the text field to the variable in type double
                 _basePrice = double.Parse(basePriceTextBox.Text);
 
+                //sum for subtotal
                 _subTotal = _basePrice + _additionalOptions;
+
+                //calculating sales tax
                 _salesTax = 0.13 * _subTotal;
+
+                //calculating total
                 _total = _subTotal + _salesTax;
+
+                //calculating tradeinallowance
                 _amountDue = _total - _tradeInAllowance;
 
+
+                //The following lines display the contents in the respective fields, converted into type string.
                 basePriceTextBox.Text = Convert.ToString(_basePrice);
 
                 subTotalTextBox.Text = _subTotal.ToString("F");
@@ -105,10 +153,17 @@ namespace Assignment2
             }
         }
 
+        /// <summary>
+        /// The following methods check the state of the check box or radio button and respectively apply the value to the additional field
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void stereoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if(stereoCheckBox.Checked)
             {
+                //the varialble _additionalOptions hold the value for the field additional options
                 _additionalOptions += 425.76;
                 additionalOptionsTextBox.Text = Convert.ToString(_additionalOptions);
             }
@@ -203,7 +258,12 @@ namespace Assignment2
             }
         }
 
-
+        /// <summary>
+        /// This method clears everything from the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void clearButton_Click(object sender, EventArgs e)
         {
             basePriceTextBox.Clear();
@@ -223,10 +283,22 @@ namespace Assignment2
 
         }
 
+        /// <summary>
+        /// This method exits the application by calling the formClosing event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        /// <summary>
+        /// This method confirms and then closes the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void SharpAutoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -238,15 +310,33 @@ namespace Assignment2
             }
         }
 
+        /// <summary>
+        /// This method calls the formClosing 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// This method calls the calculatebutton event handler to perform the same function.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             calculateButton_Click(sender, e);
         }
+
+        /// <summary>
+        /// This method calls the clearbutton event handler to perform the same function.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
